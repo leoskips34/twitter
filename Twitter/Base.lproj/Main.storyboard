@@ -51,19 +51,58 @@
         <!--Home-->
         <scene sceneID="Ziy-AI-nv1">
             <objects>
-                <tableViewController interfaceStyle="dark" id="ZP1-2g-PGV" customClass="HomeTableTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ZP1-2g-PGV" customClass="HomeTableTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="q6q-cT-WeB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="C5K-7w-pCb">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="120" id="C5K-7w-pCb" customClass="TweetCellTableViewCell" customModule="Twitter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C5K-7w-pCb" id="RwT-Qw-ynF">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GeM-C8-5ow">
+                                            <rect key="frame" x="20" y="11" width="65" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="65" id="Nda-zC-oHD"/>
+                                                <constraint firstAttribute="height" constant="65" id="rxS-On-K0f"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FS-Lf-hUV">
+                                            <rect key="frame" x="93" y="11.000000000000002" width="50.333333333333343" height="21.666666666666671"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21.666666666666671" id="rC8-j3-9cu"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tweet content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hd-FU-n8f">
+                                            <rect key="frame" x="93" y="36.666666666666664" width="301" height="72.333333333333343"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="6FS-Lf-hUV" firstAttribute="top" secondItem="RwT-Qw-ynF" secondAttribute="topMargin" id="8f0-MB-0sO"/>
+                                        <constraint firstItem="7hd-FU-n8f" firstAttribute="top" secondItem="6FS-Lf-hUV" secondAttribute="bottom" constant="4" id="FEJ-qw-k3A"/>
+                                        <constraint firstItem="7hd-FU-n8f" firstAttribute="trailing" secondItem="RwT-Qw-ynF" secondAttribute="trailingMargin" id="P7G-dm-2LO"/>
+                                        <constraint firstItem="7hd-FU-n8f" firstAttribute="leading" secondItem="GeM-C8-5ow" secondAttribute="trailing" constant="8" id="VEW-E1-b7P"/>
+                                        <constraint firstItem="GeM-C8-5ow" firstAttribute="leading" secondItem="RwT-Qw-ynF" secondAttribute="leadingMargin" id="c4R-Tq-pZ4"/>
+                                        <constraint firstItem="GeM-C8-5ow" firstAttribute="top" secondItem="RwT-Qw-ynF" secondAttribute="topMargin" id="jd0-nS-MTC"/>
+                                        <constraint firstItem="7hd-FU-n8f" firstAttribute="bottom" secondItem="RwT-Qw-ynF" secondAttribute="bottomMargin" id="qS1-il-c67"/>
+                                        <constraint firstItem="6FS-Lf-hUV" firstAttribute="leading" secondItem="GeM-C8-5ow" secondAttribute="trailing" constant="8" id="wQ8-ec-78l"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="profileImageView" destination="GeM-C8-5ow" id="R1a-Ic-9Q5"/>
+                                    <outlet property="tweetContent" destination="7hd-FU-n8f" id="ipR-gU-gK4"/>
+                                    <outlet property="userNameLabel" destination="6FS-Lf-hUV" id="fTn-QZ-K4U"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -82,12 +121,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tlb-5R-COz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1717" y="133"/>
+            <point key="canvasLocation" x="1715.9420289855075" y="132.58928571428572"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pml-fv-PyG">
             <objects>
-                <navigationController interfaceStyle="dark" id="DYY-Pc-JD7" sceneMemberID="viewController">
+                <navigationController toolbarHidden="NO" id="DYY-Pc-JD7" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="h7k-7i-5B2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tFn-aO-wk8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
