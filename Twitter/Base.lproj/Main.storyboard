@@ -51,7 +51,7 @@
         <!--Home-->
         <scene sceneID="Ziy-AI-nv1">
             <objects>
-                <tableViewController id="ZP1-2g-PGV" customClass="HomeTableTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController interfaceStyle="dark" id="ZP1-2g-PGV" customClass="HomeTableTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="q6q-cT-WeB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,7 +87,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Pml-fv-PyG">
             <objects>
-                <navigationController id="DYY-Pc-JD7" sceneMemberID="viewController">
+                <navigationController interfaceStyle="dark" id="DYY-Pc-JD7" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="h7k-7i-5B2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tFn-aO-wk8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
