@@ -25,6 +25,11 @@ class HomeTableTableViewController: UITableViewController {
                tableView.estimatedRowHeight = 150
         
        }
+    
+     override func viewDidAppear(_ animated: Bool) {
+           super.viewDidAppear(animated)
+           self.loadTweet()
+       }
 
     @objc func loadTweet(){
         
