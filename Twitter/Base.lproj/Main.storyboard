@@ -41,7 +41,7 @@
                         <viewLayoutGuide key="safeArea" id="rVj-Nq-sXu"/>
                     </view>
                     <connections>
-                        <segue destination="DYY-Pc-JD7" kind="show" identifier="loginToHome" id="qrM-KO-jj7"/>
+                        <segue destination="DYY-Pc-JD7" kind="presentation" identifier="loginToHome" animates="NO" id="qrM-KO-jj7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jNU-IA-N4x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -53,7 +53,7 @@
             <objects>
                 <tableViewController id="ZP1-2g-PGV" customClass="HomeTableTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="q6q-cT-WeB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -126,10 +126,10 @@
         <!--Navigation Controller-->
         <scene sceneID="Pml-fv-PyG">
             <objects>
-                <navigationController toolbarHidden="NO" id="DYY-Pc-JD7" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" toolbarHidden="NO" id="DYY-Pc-JD7" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="h7k-7i-5B2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tFn-aO-wk8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0" green="0.46189910169999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">

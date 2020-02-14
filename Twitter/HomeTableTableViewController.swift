@@ -21,6 +21,8 @@ class HomeTableTableViewController: UITableViewController {
         loadTweet()
         myRefreshControl.addTarget(self, action: #selector(loadTweet), for: .valueChanged)
         tableView.refreshControl = myRefreshControl
+        tableView.rowHeight = UITableView.automaticDimension
+               tableView.estimatedRowHeight = 150
         
        }
 
@@ -80,6 +82,7 @@ class HomeTableTableViewController: UITableViewController {
         
         TwitterAPICaller.client?.logout()
         self.dismiss(animated: true, completion: nil)
+         UserDefaults.standard.set(false, forKey: "userLoggedIn")
     }
    
    
